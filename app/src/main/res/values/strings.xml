@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Agenda</string>
+
+    <!-- hints -->
+    <string name="hint_new_aluno_name">Nome</string>
+    <string name="hint_new_aluno_phone">Telefone</string>
+    <string name="hint_new_aluno_email">E-mail</string>
+</resources>

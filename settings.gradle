@@ -1,0 +1,2 @@
+rootProject.name='alunos_agenda'
+include ':app'
