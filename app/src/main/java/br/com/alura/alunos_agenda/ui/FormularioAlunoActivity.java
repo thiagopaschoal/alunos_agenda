@@ -3,12 +3,9 @@ package br.com.alura.alunos_agenda.ui;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
 import android.widget.Toast;
 
 import br.com.alura.alunos_agenda.R;
@@ -19,7 +16,6 @@ import br.com.alura.alunos_agenda.model.Aluno;
 public class FormularioAlunoActivity extends AppCompatActivity {
 
     private FormularioAlunoHelper alunoHelper;
-    private Aluno aluno = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,8 +25,8 @@ public class FormularioAlunoActivity extends AppCompatActivity {
         this.alunoHelper = new FormularioAlunoHelper(this);
 
         if (getIntent().hasExtra("aluno")) {
-            this.aluno = (Aluno) getIntent().getSerializableExtra("aluno");
-            this.alunoHelper.preencheFormulario(aluno);
+            Aluno aluno = (Aluno) getIntent().getSerializableExtra("aluno");
+            if (aluno != null) this.alunoHelper.preencheFormulario(aluno);
             setTitle("Editar aluno");
         } else {
             setTitle("Novo aluno");
@@ -49,7 +45,7 @@ public class FormularioAlunoActivity extends AppCompatActivity {
 
             final AlunoDAO alunoDAO = new AlunoDAO();
             final Aluno aluno = alunoHelper.preencheAlunos();
-            String msg = null;
+            String msg;
 
             if (alunoHelper.getAluno() != null && alunoHelper.getAluno().getId() != null) {
                 Long id = alunoHelper.getAluno().getId();

@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         app:fabSize="normal"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
         android:layout_margin="16dp"
         android:clickable="true"
         android:focusable="true"

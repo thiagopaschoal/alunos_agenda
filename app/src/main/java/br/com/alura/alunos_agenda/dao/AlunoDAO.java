@@ -37,12 +37,11 @@ public class AlunoDAO {
     public void remove(Aluno aluno) {
         Aluno alunoEncontrado = null;
         for (Aluno a : alunos) {
-            if (a.getId() == aluno.getId()) {
+            if (a.getId().intValue() == aluno.getId().intValue()) {
                 alunoEncontrado = a;
             }
         }
 
-        final int index = alunos.indexOf(alunoEncontrado);
-        alunos.remove(index);
+        alunos.remove(alunoEncontrado);
     }
 }

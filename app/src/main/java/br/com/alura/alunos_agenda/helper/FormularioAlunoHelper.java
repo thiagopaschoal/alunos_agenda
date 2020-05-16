@@ -2,16 +2,15 @@ package br.com.alura.alunos_agenda.helper;
 
 import android.app.Activity;
 import android.widget.EditText;
-import android.widget.TextView;
 
 import br.com.alura.alunos_agenda.R;
 import br.com.alura.alunos_agenda.model.Aluno;
 
 public class FormularioAlunoHelper {
 
-    private EditText inputName;
-    private EditText inputPhone;
-    private EditText inputEmail;
+    private final EditText inputName;
+    private final EditText inputPhone;
+    private final EditText inputEmail;
 
     private Aluno aluno;
 
@@ -23,10 +22,9 @@ public class FormularioAlunoHelper {
     }
 
     public Aluno preencheAlunos() {
-        final Aluno aluno = new Aluno(this.inputName.getText().toString(),
+        return new Aluno(this.inputName.getText().toString(),
                 this.inputPhone.getText().toString(),
                 this.inputEmail.getText().toString());
-        return aluno;
     }
 
     public void preencheFormulario(Aluno aluno) {

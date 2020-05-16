@@ -14,21 +14,10 @@ public class Aluno implements Serializable {
     public Aluno() {
     }
 
-    public Aluno(String id, String nome, String telefone, String email) {
-        this.id = Long.parseLong(id);
-        this.nome = nome;
-        this.telefone = telefone;
-        this.email = email;
-    }
-
     public Aluno(String nome, String telefone, String email) {
         this.nome = nome;
         this.telefone = telefone;
         this.email = email;
-    }
-
-    public boolean hasId() {
-        return id.intValue() > 0;
     }
 
     public Long getId() {

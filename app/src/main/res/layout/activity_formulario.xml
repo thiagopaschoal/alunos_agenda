@@ -5,7 +5,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
 
         <EditText
@@ -14,7 +14,8 @@
             android:layout_margin="8dp"
             android:inputType="textCapWords"
             android:hint="@string/hint_new_aluno_name"
-            android:id="@+id/input_nome"/>
+            android:id="@+id/input_nome"
+            android:importantForAutofill="no" />
 
         <EditText
             android:layout_width="match_parent"
@@ -22,7 +23,8 @@
             android:inputType="phone"
             android:layout_margin="8dp"
             android:hint="@string/hint_new_aluno_phone"
-            android:id="@+id/input_telefone"/>
+            android:id="@+id/input_telefone"
+            android:importantForAutofill="no" />
 
         <EditText
             android:layout_width="match_parent"
@@ -30,7 +32,8 @@
             android:layout_margin="8dp"
             android:inputType="textEmailAddress"
             android:hint="@string/hint_new_aluno_email"
-            android:id="@+id/input_email"/>
+            android:id="@+id/input_email"
+            android:importantForAutofill="no" />
 
     </LinearLayout>
 </ScrollView>
